@@ -2,11 +2,11 @@ from django.db import models
 
 
 class Ctavka(models.Model):
-    title = models.CharField(max_length=50)
-    content = models.TextField(null=True, blank=True) #поле можно не заполнять
-    price = models.FloatField(null=True, blank=True)
-    coefficient = models.FloatField(null=True, blank=True)
-    published = models.DateTimeField(auto_now_add=True, db_index=True)
+    title = models.CharField(max_length=50,, verbose_name='заголовок')
+    content = models.TextField(null=True, blank=True, verbose_name='контент') #поле можно не заполнять
+    price = models.FloatField(null=True, blank=True, verbose_name='сумма')
+    coefficient = models.FloatField(null=True, blank=True, verbose_name='кэфф')
+    published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='дата публикации')
 
     sport = models.ForeignKey("Sport", null=True, on_delete=models.PROTECT, verbose_name='спорт')
     total = models.ForeignKey("Total", null=True, on_delete=models.PROTECT, verbose_name='итог ставки')
