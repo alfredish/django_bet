@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Ctavka(models.Model):
-    title = models.CharField(max_length=50,, verbose_name='заголовок')
+    title = models.CharField(max_length=50, verbose_name='заголовок')
     content = models.TextField(null=True, blank=True, verbose_name='контент') #поле можно не заполнять
     price = models.FloatField(null=True, blank=True, verbose_name='сумма')
     coefficient = models.FloatField(null=True, blank=True, verbose_name='кэфф')

@@ -5,6 +5,15 @@
     <title></title>
   </head>
   <body>
-    hello
+    {% for Ctavka in Ctavkas %}
+    <div>
+      <h2>{{ Ctavka.title }}</h2>
+      <p>{{ Ctavka.content }}</p>
+      <p>Сумма ставки: {{ Ctavka.price }}   Кэфф: {{ Ctavka.coefficient}}</p>
+      <p>Дата публикации {{ Ctavka.published }} Вид спорта: {{ Ctavka.sport }}
+      <p>{{ Ctavka.total }}</p>
+    </div>
+    <br>
+    {% endfor %}
   </body>
 </html>
