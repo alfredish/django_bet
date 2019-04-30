@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Не забыть подключить CSS и перекинуть весь код CSS в static !! и что-то сделать с дизайонм хоть чуть-чуть  -->
+    <style>
+      .main {
+        float:right;
+        width:70%;
+      }
+      .sidebar {
+        float:left;
+        width:30%;
+      }
+
+      h1{
+        text-align: center
+      }
+    </style>
     <meta charset="utf-8">
     <title></title>
   </head>
+
   <body>
     <h1>Прогнозы</h1>
 
+    <div class="main">
     {% for Ctavka in Ctavkas %}
     <div>
       <h2>{{ Ctavka.title }}</h2>
@@ -17,6 +34,12 @@
     </div>
     <br>
     {% endfor %}
+    </div>
+
+    <div class="sidebar">
+      <h3>Полезные ссылочки</h3>
+
+    </div>
 
   </body>
 </html>

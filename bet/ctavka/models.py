@@ -17,8 +17,6 @@ class Ctavka(models.Model):
         ordering = ['-published']
 
 
-
-
 #Модель отвечает за выбор спорта
 class Sport(models.Model):
     sport_name = models.CharField(max_length=30, verbose_name='Вид спорта')
